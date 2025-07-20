@@ -104,25 +104,6 @@ bool Input::IsKeyToggled(const MyKeysEnum& keyIdentifier, const float& timeToRel
 			}
 		}
 
-
-	//if (timeToRelease == 0)
-	//{
-	//	if (allPressed)
-	//	{
-	//		if (!keys[keyIdentifier][0].isToggled)
-	//		{
-	//			keys[keyIdentifier][0].isToggled = true;
-	//			return true;
-	//		}
-	//		return false;
-	//	}
-	//	else
-	//	{
-	//		keys[keyIdentifier][0].isToggled = false;
-	//		return false;
-	//	}
-	//	return false;
-	//}
 	//else
 	{
 		bool result = false;
