@@ -17,90 +17,24 @@ void Draw::Render(HDC& hDc)
     CreateContext(hDc);
     RestoreContext(hDc);
 }
-//void Draw::CreateContext(HDC& hDc)
-//{
-//
-//    static GLint last_viewport[4];
-//
-//    static bool init = false;
-//
-//    if (!init)
-//    {
-//        gladLoadGL();
-//        //moved from every frame
-//        old_context = wglGetCurrentContext();
-//        glGetIntegerv(GL_VIEWPORT, viewport);
-//        screenProportions.x = viewport[2] / 640.0f;
-//        screenProportions.y = viewport[3] / 480.0f;
-//        screenCenter.x = viewport[2] / 2;
-//        screenCenter.y = viewport[3] / 2;
-//        //moved from every frame
-//
-//        if (new_context != NULL)
-//        {
-//            wglMakeCurrent(hDc, NULL);
-//            wglDeleteContext(new_context);
-//        }
-//
-//        new_context = wglCreateContext(hDc);
-//
-//        wglMakeCurrent(hDc, new_context);
-//
-//        glViewport(0, 0, viewport[2], viewport[3]);
-//        glMatrixMode(GL_PROJECTION);
-//        glLoadIdentity();
-//        glOrtho(0, viewport[2], viewport[3], 0, -1, 1);
-//        glMatrixMode(GL_MODELVIEW);
-//        glLoadIdentity();
-//        glDisable(GL_DEPTH_TEST);
-//        glEnable(GL_BLEND);
-//        glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
-//        memcpy(last_viewport, viewport, sizeof(GLint) * 4);
-//        regular24 = new Font(24, 0, 0, "Calibri", hDc);
-//        bold28 = new Font(28, true, 0, "Calibri", hDc);
-//        init = true;
-//    }
-//    CalculateScreenAdjustment();
-//    wglMakeCurrent(hDc, new_context);
-//}
 
 bool Draw::CreateContext(HDC& hDc) 
 {
     static GLint last_viewport[4] = { 0, 0, 0, 0 };
     static bool init = false;
-
     if (!init) 
     {
         gladLoadGL();
-
         old_context = wglGetCurrentContext();
-
         if (new_context) {
             wglMakeCurrent(NULL, NULL);
             wglDeleteContext(new_context);
         }
-
         new_context = wglCreateContext(hDc);
-
-
         if (!new_context || !wglMakeCurrent(hDc, new_context)) {
             return false;
         }
-
         glGetIntegerv(GL_VIEWPORT, viewport);
-
-
-        //test
-        if (viewport[0] == 0 && viewport[1] == 0 && viewport[2] == 0 && viewport[3] == 0)
-        {
-            if (!a)
-                return false;
-            else
-            {
-                viewport[2] = *(int*)(a->fovX - 8);  viewport[3] = *(int*)(a->fovX - 4);
-            }
-        }
-        //test
 
         screenProportions.x = viewport[2] / 640.0f;
         screenProportions.y = viewport[3] / 480.0f;
@@ -117,21 +51,14 @@ bool Draw::CreateContext(HDC& hDc)
         glEnable(GL_BLEND);
         glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
-
         memcpy(last_viewport, viewport, sizeof(GLint) * 4);
 
         regular24 = new Font(24, 0, 0, "Calibri", hDc);
         bold28 = new Font(28, true, 0, "Calibri", hDc);
-
         init = true;
     }
 
     CalculateScreenAdjustment();
-
-    if (!wglMakeCurrent(hDc, new_context)) 
-    {
-
-    }
 
     return true;
 }
@@ -145,7 +72,6 @@ void Draw::Init(Addresses*_a)
     a = _a;
     refDef = *(RefDef*)a->fovX;
     CalculateScreenAdjustment();
-
 }
 void Draw::DrawMenuItem(MenuItem&item)
 {
@@ -158,7 +84,6 @@ void Draw::DrawMenuBlock(MenuBlock& mb)
     Vertex2 l_top, r_top, l_bot, r_bot;
 
     l_top = mb.loc;
-
     r_top.x = l_top.x + mb.width;   r_top.y = l_top.y;
     r_bot.x = l_top.x + mb.width;   r_bot.y = l_top.y + mb.height;
     l_bot.x = l_top.x;           l_bot.y = l_top.y + mb.height;
@@ -187,8 +112,6 @@ void Draw::DrawMenuBlock(MenuBlock& mb)
         }
         else
             mb.color[3] = 0.4;
-
-
     }
 
     glColor4f(mb.color[0], mb.color[1], mb.color[2], mb.color[3]);
@@ -198,8 +121,6 @@ void Draw::DrawMenuBlock(MenuBlock& mb)
     glVertex2i(r_top.x, r_top.y);
     glVertex2i(l_top.x, l_top.y);
     glEnd();
-
-
 
     mb.SetBlockSize(true);
     if (!mb.isDraw)
@@ -380,7 +301,6 @@ void Draw::DrawRotatedBBox(const Vec3& _bottom, const Vec3& _top, const Vec3& mi
 }
 void Draw::DrawBBox(const Vec3& _bottom, const Vec3& _top, const Vec3& min, const Vec3& max, const float& lineWidth, const GLfloat color[4])
 {
-
     Vertex2 bottom[4];
     Vertex2 top[4];
 
@@ -403,7 +323,6 @@ void Draw::DrawBBox(const Vec3& _bottom, const Vec3& _top, const Vec3& min, cons
     Vec3 xpynzpR;
     Vec3 xnypzpR;
     Vec3 xnynzpR;
-
 
     if (!WTS(xn_yn, bottom[0]) || !WTS(xp_yn, bottom[1]) || !WTS(xp_yp, bottom[2]) || !WTS(xn_yp, bottom[3]))
         return;
@@ -655,9 +574,7 @@ void Draw::DrawImpactFigure(const Vec3& finalPoint, const Vec3& normal, const fl
     TransformFigure(finalPoint, externalCircle, normal);
     GetScreenFigurePoints(externalCircle, externalCircleScreen);
     DrawLineFigure(externalCircleScreen, 2, color);
-
-
-
+    
     std::vector<Vec3> internalCircle; std::vector<Vertex2> internalCircleScreen;
     CreateCircle(internalRadius, numSengments, internalCircle); for (auto& p : internalCircle) { p.z += radius*0.15; }
     TransformFigure(finalPoint, internalCircle, normal);
@@ -671,8 +588,6 @@ void Draw::DrawImpactFigure(const Vec3& finalPoint, const Vec3& normal, const fl
     DrawLineFigure(internalCircleHaloScreen, 1, color);
     //return;
     std::vector<Vertex2> verts(4);
-
-
 
     for (int i = 0; i < externalCircleScreen.size(); i+=2)
     {
@@ -981,8 +896,6 @@ void Draw::DrawWorld(World* world, const Vec3& origin, const CellCoordinates& my
 #endif
             }
         }
-
-
 }
 void Draw::DrawGraph(const std::unordered_map<uintptr_t, GraphNode*>& graph, const Vec3& myPos, const uint32_t& flags,
     std::unordered_map<GraphColors, std::vector<float>>& graphColors)
@@ -1229,16 +1142,6 @@ void Draw::DrawPath(const std::unordered_map<uintptr_t, GraphNode*>& graph, cons
                 color[2] = 0.3;
 
             DrawLine(start, end, 3, color);
-
-
-            //endVert3 = it->second->vertex; endVert3.z += 12;
-            //WTS(startVert3, startVert); WTS(endVert3, endVert);
-            //if (startVert != 0 && endVert != 0)
-            //{
-            //    DrawLine(end, endVert, 2, color);
-            //    DrawLine(start, startVert, 2, color);
-            //}
-            //startVert3 = endVert3;
         }
         start = end;
     }
