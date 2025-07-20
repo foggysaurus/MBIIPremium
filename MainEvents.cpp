@@ -251,11 +251,6 @@ void MainEvents::MakeLeader(const int& id)
 			pl.permanentPlayerFlags |= PermanentPlayerFlags::IS_NOT_LEADER;
 		}
 	}
-	//else
-	//{
-	//	p->permanentPlayerFlags &= ~PermanentPlayerFlags::IS_LEADER;
-	//	p->permanentPlayerFlags |= PermanentPlayerFlags::IS_NOT_LEADER;
-	//}
 }
 void MainEvents::AddFriend(const int& id)
 {
@@ -1578,110 +1573,6 @@ void MainEvents::WriteSDBotToLeader(PlayersToSend& playersData)
 }
 void MainEvents::WriteSharedData()
 {
-	if (1)
-	{
-
-
-		//PlayersToSend pts;
-		//PlayerData pd;
-		//int index = 0;
-		//int lastValidIndex = 0;
-		//int testCount = 0;
-
-		//memset(&pd, 0, sizeof(PlayerData));
-
-		//for (int i =0; i < MAX_PLAYERS; i++)
-		//{
-		//	memset(&pts.pd[i], 0, sizeof(PlayerData));
-		//}
-
-		//pts.followingThisId = -1;
-		////pts.orderCellLocation = 0;
-		//pts.shouldThisBotReloadMap = false;
-		//pts.thisBotHasReloadedMap = false;
-
-		//if (thisBotMapHasAlreadyBeenReloaded)
-		//{
-		//	pts.thisBotHasReloadedMap = true;
-		//	thisBotMapHasAlreadyBeenReloaded = false;
-		//}
-
-		//for (auto& p : players)
-		//{
-		//	//if (world && !isRobot && p.botInfo.cellLookingAtSave != 0)
-		//	//{
-		//	//	pts.orderCellLocation = world->pack_cell_and_chunk(p.botInfo.cellLookingAtSave);
-		//	//}
-
-		//	//skip dead unrendered or telecomm players
-		//	if (
-		//		p.team == Teams::NONE
-		//		|| p.wpInfo.num == Weapons::WP_NONE
-		//		|| p.entClass == EntClass::CL_NONE
-		//		|| p.stance == Stances::NONE
-		//		|| !(p.playerFlags & (PlayerFlags::IS_ALIVE))
-		//		|| !(p.playerFlags & PlayerFlags::IS_RENDERED)
-		//		|| (p.playerFlags & (PlayerFlags::IS_TELECOMMUNICATED)))
-		//	{
-		//		index++;
-		//		continue;
-		//	}
-
-		//	if (me.bot.tgtCells[TargetCells::ORDER_TARGET_CELL] != 0 && p.id == me.trueId && world)
-		//	{
-		//		pd.minionDestinationCell = world->pack_cell_and_chunk(me.bot.tgtCells[TargetCells::ORDER_TARGET_CELL]);
-		//		pd.minionWalkingTowardsThisDestinationId = p.id;
-		//	}
-
-		//	if ((p.permanentPlayerFlags & PermanentPlayerFlags::IS_LEADER) && (p.id == me.trueId))
-		//	{
-		//		pd.isLeader = true;
-		//		pd.isNotLeader = false;
-		//	}
-
-		//	if ((p.permanentPlayerFlags & PermanentPlayerFlags::IS_NOT_LEADER) && (p.id == me.trueId))
-		//	{
-		//		pd.isLeader = false;
-		//		pd.isNotLeader = true;
-		//	}
-
-		//	if (p.permanentPlayerFlags & PermanentPlayerFlags::IS_LEADER)
-		//		pts.followingThisId = p.id;
-
-		//	pd.id = p.id;
-		//	pd.entClass = p.entClass;
-		//	pd.stance = p.stance;
-		//	pd.weapon = p.wpInfo.num;
-		//	pd.team = p.team;
-		//	pd.pos = p.position;
-		//	pd.modelData = p.playerModel;
-		//	pd.playerFlags = p.playerFlags;
-		//	pd.yaw = p.yaw;
-		//	pd.pitch = p.pitch;
-		//	pd.uvec = p.uvec;
-
-		//	pts.pd[index] = pd;
-		//	index++;
-		//	lastValidIndex = index;
-		//	memset(&pd, 0, sizeof(PlayerData));
-
-		//	testCount++;
-		//}
-
-		//me.entClass;
-
-		//pts.myPlayerId = me.trueId;
-		//pts.myPid = me.bot.myPid;
-		//pts.size = lastValidIndex * sizeof(PlayerData);
-		//pts.tick = currentFrame;
-
-		//if (reloadBotMaps)
-		//	pts.shouldThisBotReloadMap = true;
-
-		//otherClientData.WriteMemory(pts);	
-	}
-
-
 	PlayersToSend playersToSend;
 
 	for (int i = 0; i < MAX_PLAYERS; i++)
@@ -1753,123 +1644,6 @@ void MainEvents::ReadSDBotFromLeader(PlayersToSend& playersData)
 }
 void MainEvents::ReadSharedData()
 {
-	if (2)
-	{
-		//readSharedMemoryTimer.Start();
-		//std::vector<PlayersToSend> pts;
-		//pts = otherClientData.ReadMultipleMemories();
-		//readSharedMemoryTimer.Stop();
-
-		//std::set<int> followerBotIds;
-
-		//me.bot.minionIds.clear();
-
-		//reloadThisBotMap = false;
-
-		//for (auto&pd: pts)
-		//{
-		//	if (pd.myPid)
-		//		me.bot.allBotPids.insert(pd.myPid);
-		//	if (pd.followingThisId == me.trueId)
-		//		me.bot.minionIds.insert(pd.followingThisId);
-
-		//	if (pd.shouldThisBotReloadMap && !thisBotMapHasAlreadyBeenReloaded)
-		//	{
-		//		reloadThisBotMap = true;
-		//		thisBotMapHasAlreadyBeenReloaded = true;
-		//	}
-		//	if (pd.thisBotHasReloadedMap)
-		//		reloadBotMaps = false;
-
-		//	for (int i = 0; i <= maxPlayerId; i++)
-		//	{
-		//		if (pd.pd[i].team != Teams::NONE
-		//			&& pd.pd[i].id != me.trueId
-		//			&& pd.pd[i].isLeader
-		//			)
-		//		{
-		//			MakeLeader(i);
-		//		}
-
-		//		if (pd.pd[i].isNotLeader == true && pd.pd[i].id != me.trueId)
-		//		{
-		//			players[i].permanentPlayerFlags &= ~PermanentPlayerFlags::IS_LEADER;
-		//		}
-
-		//		if (pd.pd[i].minionDestinationCell != 0 && pd.pd[i].minionWalkingTowardsThisDestinationId != -1 && world)
-		//		{
-		//			players[i].botInfo.minionDestination = world->unpack_cell_and_chunk(pd.pd[i].minionDestinationCell);
-		//			players[i].botInfo.minionId = pd.pd[i].minionWalkingTowardsThisDestinationId;
-		//		}
-
-		//		//all clients receive this
-		//		 if (pd.pd[i].id != me.trueId
-		//			&& pd.pd[i].team != Teams::NONE
-		//			&& !(players[i].playerFlags & PlayerFlags::IS_RENDERED)
-		//			)
-		//		 {
-		//			 players[i].entClass = pd.pd[i].entClass;
-		//			 players[i].stance = pd.pd[i].stance;
-		//			 players[i].wpInfo.num = pd.pd[i].weapon;
-		//			 players[i].team = pd.pd[i].team;
-		//			 players[i].position = pd.pd[i].pos;
-		//			 players[i].playerModel = pd.pd[i].modelData;
-
-		//			 players[i].uvec = pd.pd[i].uvec;
-		//			 players[i].pitch = pd.pd[i].pitch;
-		//			 players[i].yaw = pd.pd[i].yaw;
-
-		//			 players[i].playerFlags |= PlayerFlags::IS_REWRITTEN;
-		//			 players[i].playerFlags |= PlayerFlags::IS_RENDERED;
-		//			 players[i].playerFlags |= PlayerFlags::IS_ALIVE;
-		//			 players[i].playerFlags |= PlayerFlags::IS_VALID;
-		//			 players[i].playerFlags |= PlayerFlags::IS_TELECOMMUNICATED;
-
-		//			 //here because if the leader is in render bot will see the target anyway
-		//			 //if (world)
-		//			 //{
-		//				// me.bot.tgtCells[TargetCells::ORDER_TARGET_CELL] = world->unpack_cell_and_chunk(pd.orderCellLocation);
-		//				// if (world->unpack_cell_and_chunk(pd.orderCellLocation) == 0)
-		//				//	 int a = 3;
-		//			 //}
-
-		//		 }
-
-
-
-		//		if (isRobot && (pd.pd[i].playerFlags & PlayerFlags::IS_RENDERED_ON_MAIN_WINDOW))
-		//		{
-		//			players[i].playerFlags |= PlayerFlags::IS_RENDERED_ON_MAIN_WINDOW;
-		//		}
-		//	}
-
-		//	if (!(players[pd.myPlayerId].permanentPlayerFlags & PermanentPlayerFlags::IS_LEADER))
-		//		followerBotIds.insert(pd.myPlayerId);
-		//}
-
-		////insert ordered ids and choose position relative to leader (smaller ids get priority)
-		//followerBotIds.insert(me.trueId);
-		//auto it = followerBotIds.find(me.trueId);
-		//if (it != followerBotIds.end())
-		//{
-		//	int foundId = *it; 
-		//	int position = std::distance(followerBotIds.begin(), it);
-
-		//	switch (position) // Switch on the integer ID
-		//	{
-		//	case 0:
-		//		me.bot.botLeaderPosition = BotLeaderPosition::LEFT; // Map integer 0 to enum LEFT
-		//		break;
-		//	case 1:
-		//		me.bot.botLeaderPosition = BotLeaderPosition::RIGHT; // Map integer 1 to enum RIGHT
-		//		break;
-		//	default:
-		//		me.bot.botLeaderPosition = BotLeaderPosition::BACK; // Default mapping for other integers
-		//		break;
-		//	}
-		//}
-	}
-
 	std::vector<PlayersToSend> allClientsData;
 	allClientsData = otherClientData.ReadMultipleMemories();
 
@@ -2073,19 +1847,6 @@ void MainEvents::CrouchWhenAttacked()
 				}
 			}
 		}
-
-		//if (isCrouched && !(p.playerFlags & PlayerFlags::IS_GONNA_KNOCK_ME_DOWN))
-		//{
-		//	act.Stop(DoAction::CROUCH);
-		//	draw->bold28->Print(400, 400, RGB::yellow, "STOP CROUCH");
-		//	isCrouched = false;
-		//}
-		//else if (isJumped && p.stance != Stances::SWEEPKICK)
-		//{
-		//	act.Stop(DoAction::JUMP);
-		//	draw->bold28->Print(400, 400, RGB::yellow, "STOP JUMP");
-		//	isJumped = false;
-		//}
 	}
 
 	if (shouldCrouch)
