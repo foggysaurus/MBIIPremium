@@ -16,7 +16,8 @@ This is a multiplayer bot support mod that I developed in C++ for over 3 years
 
   _Here the bot chases a target on difficult terrain
 
-  ![complex_beh3](https://github.com/user-attachments/assets/6d9fd133-942d-4abe-b96e-44f8257a8cef)
+  ![complex_beh3](https://github.com/user-attachments/assets/9ccc2e87-bba2-41dc-9d9e-1d6f64881eaf)
+
 
 
 - A custom toolset for generating,  editing, and saving a navigation mesh in-game
