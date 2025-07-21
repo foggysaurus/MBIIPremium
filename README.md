@@ -11,11 +11,11 @@ This is a multiplayer bot support mod that I developed in C++ for over 3 years
 
   _Taking elevators, jumping across gaps, traversing obstacles_
 
-<p float="left"> <img src="https://github.com/user-attachments/assets/23c87f55-a95d-4e2b-970b-c95d0472095d" width="300"/> <img src="https://github.com/user-attachments/assets/5b1ca60d-6e74-439a-a785-2d8f38e1dca0" width="300"/> <img src="https://github.com/user-attachments/assets/9ccc2e87-bba2-41dc-9d9e-1d6f64881eaf" width="300"/> </p>
+    <p float="left"> <img src="https://github.com/user-attachments/assets/23c87f55-a95d-4e2b-970b-c95d0472095d" width="300"/> <img src="https://github.com/user-attachments/assets/5b1ca60d-6e74-439a-a785-2d8f38e1dca0" width="300"/> <img src="https://github.com/user-attachments/assets/9ccc2e87-bba2-41dc-9d9e-1d6f64881eaf" width="300"/> </p>
 
 - A custom toolset for generating,  editing, and saving a navigation mesh in-game
 
-<p float="left"> <img src="https://github.com/user-attachments/assets/871f7500-43c3-4656-accb-87727e455f1c" width="300"/> <img src="https://github.com/user-attachments/assets/9802aafb-320b-499d-bf28-9eeeba425a94" width="300"/> </p>
+    <p float="left"> <img src="https://github.com/user-attachments/assets/871f7500-43c3-4656-accb-87727e455f1c" width="300"/> <img src="https://github.com/user-attachments/assets/9802aafb-320b-499d-bf28-9eeeba425a94" width="300"/> </p>
 
 - Custom mesh trigger cells:
   - The "jump" cell, "can only go down/up" cell, "elevator, elevator button (of different types)" cells, "danger" cells to avoid etc.
