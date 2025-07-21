@@ -6,6 +6,10 @@ This is a multiplayer bot support mod that I developed in C++ for over 3 years
 **The mod features:**
 
 - Tweaked pathfinding algorithms for a complex dynamic 3D environment
+  
+- Bots intelligently navigate dynamic terrain:
+    Identifying and chasing targets across vertical and uneven geometry
+    Taking elevators, jumping across gaps, traversing obstacles
 
 <p float="left"> <img src="https://github.com/user-attachments/assets/23c87f55-a95d-4e2b-970b-c95d0472095d" width="300"/> <img src="https://github.com/user-attachments/assets/5b1ca60d-6e74-439a-a785-2d8f38e1dca0" width="300"/> <img src="https://github.com/user-attachments/assets/9ccc2e87-bba2-41dc-9d9e-1d6f64881eaf" width="300"/> </p>
 
