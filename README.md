@@ -32,16 +32,14 @@ This is a multiplayer bot support mod that I developed in C++ for over 3 years
     ![mesh_update](https://github.com/user-attachments/assets/bd341c64-3af5-472f-95d4-8c3fc3a2109f)
 
 - Calculations of dynamic objects on screen
-  - bots predicting the trajectories of incoming grenades and calculating the best possible escape plan if in range
-
+  - bots predicting the trajectories of incoming grenades and calculating the best possible escape plan if in range; evading environmental dangers; shooting mines
+    
   ![gren_throw](https://github.com/user-attachments/assets/707bfbc5-9d75-4d9f-b74d-41d4d0a4ed81)
 
   ![gren_dodge](https://github.com/user-attachments/assets/0f7a9169-fa01-4db8-841a-e440d49878c2)
 
   ![gren_dodge_2](https://github.com/user-attachments/assets/ccb3eb59-2e0f-4dd4-a9d9-2c71759191f8)
 
-
-  - bots evading environmental dangers; shooting mines 
 - Complex state-based bot behavior e.g.:
   - formation system where multiple bots follow their leader in a certain formation to avoid collisions
   - different modes of behavior: seek and destroy, where the bots explore the map autonomously trying to find enemies, or basic mode where a bot follows the leader trying to protect it 
