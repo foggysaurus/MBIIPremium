@@ -6,15 +6,15 @@ This is a multiplayer bot support mod that I developed in C++ for over 3 years
 
 - Tweaked pathfinding algorithms for a complex dynamic 3D environment
 
-  _Here the bot identifies a target, shoots at it. The target moves on top of the ship, then the bot takes an elevator, jumps the gap onto the ship and shoots the target_
+  _Here the bot identifies a target then shoots at it. The target moves on top of the ship, then the bot takes an elevator, jumps the gap onto the ship and shoots the target_
 
   ![complex_beh](https://github.com/user-attachments/assets/23c87f55-a95d-4e2b-970b-c95d0472095d)
 
-  _Here the bot traverses difficult terrain with gaps_
+  _Here the bot is traversing difficult terrain with gaps_
   
   ![complex_beh2](https://github.com/user-attachments/assets/5b1ca60d-6e74-439a-a785-2d8f38e1dca0)
 
-  _Here the bot chases a target on difficult terrain
+  _Here the bot is chasing a target on difficult terrain_
 
   ![complex_beh3](https://github.com/user-attachments/assets/9ccc2e87-bba2-41dc-9d9e-1d6f64881eaf)
 
