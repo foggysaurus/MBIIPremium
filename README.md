@@ -44,7 +44,10 @@ This is a multiplayer bot support mod that I developed in C++ for over 3 years
   - target priority system, e.g. prioritizing nearby strong melee players first, followed by players actively shooting within a narrow forward angle etc.
   - anti friendly fire system
   - anti melee system
-  - predictive target aiming for the bots 
+  - predictive target aiming for the bots
+
+    <img width="500" height="250" alt="image" src="https://github.com/user-attachments/assets/8b672e41-7cf1-42f6-82b7-7563b0ce5138" />
+
 - Interprocess communication to enable different game instances interact with one another
 - A system of dynamic triggers and conditions to control AI behavior contextually
 - A launcher
