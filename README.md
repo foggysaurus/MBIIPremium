@@ -26,9 +26,10 @@ This is a multiplayer bot support mod that I developed in C++ for over 3 years
     <img width="500" height="250" alt="image" src="https://github.com/user-attachments/assets/b7c24408-d19a-4380-aaa4-e5564eff186c" />
 - Real-time navmesh adaptation to dynamic world changes:
   - Bridges retracting and extending, doors becoming locked/unlocked, "mover" objects being destroyed/spawned in
- 
-    ![mesh_update](https://github.com/user-attachments/assets/bd341c64-3af5-472f-95d4-8c3fc3a2109f)
+
     ![elevator](https://github.com/user-attachments/assets/1fa47456-9efd-4b14-8513-a977df4a8d97)
+
+    ![mesh_update](https://github.com/user-attachments/assets/bd341c64-3af5-472f-95d4-8c3fc3a2109f)
 
 
 
