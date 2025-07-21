@@ -10,6 +10,7 @@ This is a multiplayer bot support mod that I developed in C++ for over 3 years
 - A custom toolset for generating,  editing, and saving a navigation mesh in-game
 
   ![mesh_edit](https://github.com/user-attachments/assets/871f7500-43c3-4656-accb-87727e455f1c)
+![elevator_edit](https://github.com/user-attachments/assets/9802aafb-320b-499d-bf28-9eeeba425a94)
 
 - Custom mesh trigger cells:
   - The "jump" cell, "can only go down/up" cell, "elevator, elevator button (of different types)" cells, "danger" cells to avoid etc.
