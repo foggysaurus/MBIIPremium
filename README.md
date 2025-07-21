@@ -8,15 +8,15 @@ This is a multiplayer bot support mod that I developed in C++ for over 3 years
 
   _Here the bot identifies a target, shoots at it. The target moves on top of the ship, then the bot takes an elevator, jumps the gap onto the ship and shoots the target_
 
-    ![complex_beh](https://github.com/user-attachments/assets/23c87f55-a95d-4e2b-970b-c95d0472095d)
+        ![complex_beh](https://github.com/user-attachments/assets/23c87f55-a95d-4e2b-970b-c95d0472095d)
 
   _Here the bot traverses difficult terrain with gaps_
   
-    ![complex_beh2](https://github.com/user-attachments/assets/5b1ca60d-6e74-439a-a785-2d8f38e1dca0)
+        ![complex_beh2](https://github.com/user-attachments/assets/5b1ca60d-6e74-439a-a785-2d8f38e1dca0)
 
 - A custom toolset for generating,  editing, and saving a navigation mesh in-game
 
-  ![mesh_edit](https://github.com/user-attachments/assets/871f7500-43c3-4656-accb-87727e455f1c)
+        ![mesh_edit](https://github.com/user-attachments/assets/871f7500-43c3-4656-accb-87727e455f1c)
   
   ![elevator_edit](https://github.com/user-attachments/assets/9802aafb-320b-499d-bf28-9eeeba425a94)
 
@@ -27,18 +27,18 @@ This is a multiplayer bot support mod that I developed in C++ for over 3 years
 - Real-time navmesh adaptation to dynamic world changes:
   - Bridges retracting and extending, doors becoming locked/unlocked, "mover" objects being destroyed/spawned in
 
-    ![elevator](https://github.com/user-attachments/assets/1fa47456-9efd-4b14-8513-a977df4a8d97)
+        ![elevator](https://github.com/user-attachments/assets/1fa47456-9efd-4b14-8513-a977df4a8d97)
 
-    ![mesh_update](https://github.com/user-attachments/assets/bd341c64-3af5-472f-95d4-8c3fc3a2109f)
+        ![mesh_update](https://github.com/user-attachments/assets/bd341c64-3af5-472f-95d4-8c3fc3a2109f)
 
 - Calculations of dynamic objects on screen
   - bots predicting the trajectories of incoming grenades and calculating the best possible escape plan if in range; evading environmental dangers; shooting mines
     
-  ![gren_throw](https://github.com/user-attachments/assets/707bfbc5-9d75-4d9f-b74d-41d4d0a4ed81)
+        ![gren_throw](https://github.com/user-attachments/assets/707bfbc5-9d75-4d9f-b74d-41d4d0a4ed81)
 
-  ![gren_dodge](https://github.com/user-attachments/assets/0f7a9169-fa01-4db8-841a-e440d49878c2)
+        ![gren_dodge](https://github.com/user-attachments/assets/0f7a9169-fa01-4db8-841a-e440d49878c2)
 
-  ![gren_dodge_2](https://github.com/user-attachments/assets/ccb3eb59-2e0f-4dd4-a9d9-2c71759191f8)
+        ![gren_dodge_2](https://github.com/user-attachments/assets/ccb3eb59-2e0f-4dd4-a9d9-2c71759191f8)
 
 - Complex state-based bot behavior e.g.:
   - formation system where multiple bots follow their leader in a certain formation to avoid collisions
