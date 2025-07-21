@@ -17,10 +17,6 @@ This is a multiplayer bot support mod that I developed in C++ for over 3 years
 
 <p float="left"> <img src="https://github.com/user-attachments/assets/871f7500-43c3-4656-accb-87727e455f1c" width="300"/> <img src="https://github.com/user-attachments/assets/9802aafb-320b-499d-bf28-9eeeba425a94" width="300"/> </p>
 
-  //![mesh_edit](https://github.com/user-attachments/assets/871f7500-43c3-4656-accb-87727e455f1c)
-  
-  //![elevator_edit](https://github.com/user-attachments/assets/9802aafb-320b-499d-bf28-9eeeba425a94)
-
 - Custom mesh trigger cells:
   - The "jump" cell, "can only go down/up" cell, "elevator, elevator button (of different types)" cells, "danger" cells to avoid etc.
 
