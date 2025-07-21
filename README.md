@@ -27,7 +27,7 @@ This is a multiplayer bot support mod that I developed in C++ for over 3 years
     <p float="left"> <img src="https://github.com/user-attachments/assets/1fa47456-9efd-4b14-8513-a977df4a8d97" width="300"/> <img src="https://github.com/user-attachments/assets/bd341c64-3af5-472f-95d4-8c3fc3a2109f" width="300"/> </p>
 
 - Bots calculate and respond to on-screen threats:
-- 
+  
     Predict and dodge incoming grenades
   
     React to environmental hazards
