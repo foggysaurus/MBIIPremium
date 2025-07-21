@@ -5,7 +5,8 @@ This is a multiplayer bot support mod that I developed in C++ for over 3 years
 **The mod features:**
 
 - Tweaked pathfinding algorithms for a complex dynamic 3D environment
-  
+
+_Here the bot identifies a target, shoots at it. The target moves on top of the ship, then the bot takes an elevator, jumps the gap onto the ship and shoots the target_
   ![complex_beh](https://github.com/user-attachments/assets/23c87f55-a95d-4e2b-970b-c95d0472095d)
 
 - A custom toolset for generating,  editing, and saving a navigation mesh in-game
