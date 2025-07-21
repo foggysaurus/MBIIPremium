@@ -38,6 +38,8 @@ This is a multiplayer bot support mod that I developed in C++ for over 3 years
 
   ![gren_dodge](https://github.com/user-attachments/assets/0f7a9169-fa01-4db8-841a-e440d49878c2)
 
+  ![gren_dodge_2](https://github.com/user-attachments/assets/ccb3eb59-2e0f-4dd4-a9d9-2c71759191f8)
+
 
   - bots evading environmental dangers; shooting mines 
 - Complex state-based bot behavior e.g.:
