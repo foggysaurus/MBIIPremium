@@ -14,6 +14,9 @@ This is a multiplayer bot support mod that I developed in C++ for over 3 years
     <img width="500" height="250" alt="image" src="https://github.com/user-attachments/assets/b7c24408-d19a-4380-aaa4-e5564eff186c" />
 - Real-time navmesh adaptation to dynamic world changes:
   - Bridges retracting and extending, doors becoming locked/unlocked, "mover" objects being destroyed/spawned in
+ 
+    <img width="400" height="300" alt="image" src="https://github.com/user-attachments/assets/512d1f01-4b15-497c-b033-16757ca5fca8" />
+
 - Calculations of dynamic objects on screen
   - bots predicting the trajectories of incoming grenades and calculating the best possible escape plan if in range
   - bots evading environmental dangers; shooting mines 
