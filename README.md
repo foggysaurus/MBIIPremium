@@ -34,7 +34,7 @@ This is a multiplayer bot support mod that I developed in C++ for over 3 years
   
     Detect and shoot mines
  
-    <p float="left"> <img src="https://github.com/user-attachments/assets/707bfbc5-9d75-4d9f-b74d-41d4d0a4ed81" width="300"/> <img src="https://github.com/user-attachments/assets/0f7a9169-fa01-4db8-841a-e440d49878c2" width="300"/> <img src="https://github.com/user-attachments/assets/ccb3eb59-2e0f-4dd4-a9d9-2c71759191f8" width="300"/> </p>
+        <p float="left"> <img src="https://github.com/user-attachments/assets/707bfbc5-9d75-4d9f-b74d-41d4d0a4ed81" width="300"/> <img src="https://github.com/user-attachments/assets/0f7a9169-fa01-4db8-841a-e440d49878c2" width="300"/> <img src="https://github.com/user-attachments/assets/ccb3eb59-2e0f-4dd4-a9d9-2c71759191f8" width="300"/> </p>
   
 
 - Complex state-based bot behavior e.g.:
