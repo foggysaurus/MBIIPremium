@@ -19,6 +19,9 @@ This is a multiplayer bot support mod that I developed in C++ for over 3 years
 
 - Calculations of dynamic objects on screen
   - bots predicting the trajectories of incoming grenades and calculating the best possible escape plan if in range
+
+<img width="300" height="200" alt="image" src="https://github.com/user-attachments/assets/cb52d931-c3ec-4576-bf65-45a46c74e7f2" />
+
   - bots evading environmental dangers; shooting mines 
 - Complex state-based bot behavior e.g.:
   - formation system where multiple bots follow their leader in a certain formation to avoid collisions
@@ -31,4 +34,7 @@ This is a multiplayer bot support mod that I developed in C++ for over 3 years
 - Interprocess communication to enable different game instances interact with one another
 - A system of dynamic triggers and conditions to control AI behavior contextually
 - A launcher
+
+  <img width="400" height="300" alt="image" src="https://github.com/user-attachments/assets/3fc19831-8734-455c-b9ad-0d988d903f88" />
+
 - Many more utility functions
