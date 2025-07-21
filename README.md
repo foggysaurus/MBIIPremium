@@ -11,6 +11,7 @@ This is a multiplayer bot support mod that I developed in C++ for over 3 years
     ![complex_beh](https://github.com/user-attachments/assets/23c87f55-a95d-4e2b-970b-c95d0472095d)
 
   _Here the bot traverses difficult terrain with gaps_
+  
     ![complex_beh](https://github.com/user-attachments/assets/f045f5d7-529b-49a4-aef5-6c5ac383f5d0)
 
 
