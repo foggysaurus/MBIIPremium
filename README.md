@@ -2,6 +2,7 @@
 This is a multiplayer bot support mod that I developed in C++ for over 3 years 
 
 **Here you can watch a demo featuring most of the things described below: https://www.youtube.com/watch?v=-_jMBa06cF4**
+
 **The mod features:**
 
 - Tweaked pathfinding algorithms for a complex dynamic 3D environment
