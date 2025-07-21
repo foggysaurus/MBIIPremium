@@ -5,7 +5,7 @@ This is a multiplayer bot support mod that I developed in C++ for over 3 years
 **The mod features:**
 
 - Tweaked pathfinding algorithms for a complex dynamic 3D environment
-- 
+  
   <img width="200" height="300" alt="image" src="https://github.com/user-attachments/assets/c7fd691d-d295-4eab-9fd2-13aa8ff55651" />
 - A custom toolset for generating,  editing, and saving a navigation mesh in-game
 - Custom mesh trigger cells:
